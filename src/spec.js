@@ -8,17 +8,9 @@ describe('Sample test', function() {
         expect(headerElement.getText()).toEqual('JSON - DataTypes');
     });
 
-    it('should element by id', function() {
-        //browser.ignoreSynchronization = true;
-        //browser.get('http://localhost:63342/MaidService/index.html');
-
-
-        //var homeIcon = element(by.xpath('//*[@id="mainMenu"]/li[1]/a/'));
-        //var parent = element(by.id('mainMenu'))
-        //var child = parent.$('li')
-        console.log($('#mainMenu'))
-
-       // expect(child.getText()).toEqual('home');
+   it('should element by id', function() {
+       var homeElement = element(by.id('mainMenu')).all(by.tagName('li')).first().element(by.tagName('a'));
+       expect(homeElement.getText()).toEqual('HOME');
     });
 
 });
